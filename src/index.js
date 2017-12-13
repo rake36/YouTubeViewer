@@ -1,7 +1,13 @@
 // ES6
+// 1 component per file!
 
 import React from 'react';          // core component stuff
 import ReactDOM from 'react-dom';   // dom manipulation stuff
+import SearchBar from './components/search_bar';
+
+const API_KEY = '<My You Tube API KEY>';
+// npm install --save youtube-api-search
+
 
 // 1. Create a new component
 
@@ -13,10 +19,13 @@ import ReactDOM from 'react-dom';   // dom manipulation stuff
 // function() => () ES6 syntax, which changes semantics of 'this'
 
 const App = () => {
-    return <div>Hi!</div>;
-}
+    return (
+    <div>
+        <SearchBar />
+    </div>
+    );
+};
 
 // 2. inject this component into the DOM
-ReactDOM.render(<App />, document.querySelector('.container'));
-
 // querySelector does not seem to apply to all elements...
+ReactDOM.render(<App />, document.querySelector('.container'));  
