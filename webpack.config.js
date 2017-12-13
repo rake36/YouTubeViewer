@@ -23,5 +23,8 @@ module.exports = {
     historyApiFallback: true,
     contentBase: './',
     port: 3000
+  },
+  node: {
+    fs: 'empty'
   }
 };
