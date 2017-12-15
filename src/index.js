@@ -6,12 +6,19 @@ require('dotenv').config()
 
 import React from 'react';          // core component stuff
 import ReactDOM from 'react-dom';   // dom manipulation stuff
+import YTSearch from 'youtube-api-search';
+
 import SearchBar from './components/search_bar';
 
 // npm install --save youtube-api-search
 //  create .env file with appropriate settings
 // https://www.npmjs.com/package/dotenv
 const API_KEY = process.env.YOUTUBE_API_KEY;
+console.log(process.env);
+
+YTSearch({key: API_KEY, term: 'algorithms'}, function(data){
+    console.log(data);
+});
 
 // 1. Create a new component
 
