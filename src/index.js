@@ -1,8 +1,11 @@
+require('dotenv').config()
+// npm install dotenv --S
+// Note: Reading from .env via filesystem not going to work for a web app...
+
 // ES6
 // 1 component per file!
 
-// npm install dotenv --S
-require('dotenv').config()
+
 
 import React from 'react';          // core component stuff
 import ReactDOM from 'react-dom';   // dom manipulation stuff
@@ -13,8 +16,8 @@ import SearchBar from './components/search_bar';
 // npm install --save youtube-api-search
 //  create .env file with appropriate settings
 // https://www.npmjs.com/package/dotenv
-const API_KEY = process.env.YOUTUBE_API_KEY;
-console.log(process.env);
+const API_KEY = 'AIzaSyCPfClJS0Ehqc8C3Jq9FEZx0ipAhC5bUM8'; //process.env.REACT_APP_YOUTUBE_API_KEY;
+// showProcessEnv();
 
 YTSearch({key: API_KEY, term: 'algorithms'}, function(data){
     console.log(data);
@@ -40,3 +43,8 @@ const App = () => {
 // 2. inject this component into the DOM
 // querySelector does not seem to apply to all elements...
 ReactDOM.render(<App />, document.querySelector('.container'));  
+
+function showProcessEnv() {
+    console.log(process.env);
+}
+
