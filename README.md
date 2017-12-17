@@ -1,25 +1,26 @@
-# ReduxSimpleStarter
+# Light-Weight YouTube Viewer
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Created by following along with 
+[Stephen Grider's class on Udemy](https://www.udemy.com/react-redux/).
 
-### Getting Started
-
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
+To download and run:
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
+> git clone https://github.com/rake36/YouTubeViewer.git
+> cd YouTubeViewer
 > npm install
 > npm start
 ```
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+By default, will run on http://localhost:3000.
 
+Modify webpack.config.js to change the port.
+
+To enable YouTube API, create a config.js file under /src/components:
 ```
-> npm install
-> npm start
+export default function() {
+    return {
+        API_KEY: 'YOUR YOUTUBE API KEY'
+    };
+}
 ```
+
